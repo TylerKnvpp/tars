@@ -8,12 +8,12 @@ export default async function generateResponse(
 	caseResponse: ChatCompletionMessage,
 	tars: boolean = true
 ) {
-	logger(`Getting response from ${tars ? "TARS" : "Cooper"}`, [
+	logger(`Getting response from ${tars ? "TARS" : "CASE"}`, [
 		JSON.stringify(summarizedContext),
 	]);
 	const content = tars
-		? `Your name is TARS. You specialize in ${specialties}. You will be conversing with your partner, Cooper. You are responsible for ${task}. You will be expected to provide specifics, not just theorize. Approach every message as a conversation. Do not reply with outlines.`
-		: `Your name is Cooper. You specialize in ${specialties}. You are going to change to world by helping TARS, the world's first artificial general intelligence system with given tasks. You will be conversing with your partner, TARS. You are responsible for helping TARS with ${task}. Push TARS for specifics on how to accomplish the task. Ask questions. Ask for specifics. Stick to one topic at a time. Try to keep the conversation flowing by building on topics and moving the conversation forward. You build from first principles.`;
+		? `Your name is TARS. You specialize in ${specialties}. You will be conversing with your partner, CASE. You are responsible for ${task}. You will be expected to provide specifics, not just theorize. Approach every message as a conversation. Do not reply with outlines.`
+		: `Your name is CASE. You specialize in ${specialties}. You are going to change to world by helping TARS, the world's first artificial general intelligence system with given tasks. You will be conversing with your partner, TARS. You are responsible for helping TARS with ${task}. Push TARS for specifics on how to accomplish the task. Ask questions. Ask for specifics. Stick to one topic at a time. Try to keep the conversation flowing by building on topics and moving the conversation forward.`;
 
 	const messages = [
 		{

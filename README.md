@@ -1,5 +1,7 @@
 # TARS
 
+![TARS](./public/tars.png)
+
 ## How the Script Works
 
 The script operates in a series of steps to enable the Language Learning Model (LLM) to have long-term memory and generate responses based on the context of the conversation. Here's a high-level overview:
